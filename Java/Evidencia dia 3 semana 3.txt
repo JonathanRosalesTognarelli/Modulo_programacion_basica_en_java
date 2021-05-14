@@ -1,0 +1,116 @@
+/**
+ *
+ * @author jonat
+ */
+public class HolaMundo {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        System.out.println("Hola MUndo");
+        System.out.println("Cruel");
+        System.out.println("");
+        
+        byte num1 = 127;
+        short num2  = 3456;
+        int num3 = 345678;
+        long num4 = 1234567;
+        System.out.println("El valor de numl  es "+num1);
+        
+        // TODO code application logic here
+    }
+                    int num= 112;
+                byte bit = 3;
+                System.out.println(num);
+                System.out.println(bit);
+                num=num+bit;
+                System.out.println(num);
+                
+
+        System.out.println("Hola mundo");
+        System.out.println("como estas?")
+                int num= 112;
+                byte bit = 3;
+                System.out.println(num);
+                System.out.println(bit);
+                num=num+bit;
+                System.out.println(num);
+                int nume= 3;
+                byte biti= 2;
+                num=nume*biti:
+                System.out.println(num);
+
+
+Calcular Promedio de Notas
+
+    public static void main(String[] args) {
+        // Calcular promedio de cuatro notas
+        int nota1= 6;
+        int nota2= 5;
+        int nota3= 7;
+        int nota4= 4;
+          System.out.println("Ingrese candidad de notas");
+          float promedio;
+          promedio = ( nota1+nota2+nota3+nota4 )/4;
+          System.out.println("El promedio de notas es "  +promedio);
+
+Calcular Promedio de notas 2 : 
+    public static void main(String[] args) {
+        
+        
+        Scanner leer= new Scanner (System.in);
+        float nota1, nota2 , nota3, nota4, promedio;
+        
+        System.out.println("Ingrese nota 1");
+        nota1 = leer.nextFloat ();
+        System.out.println("Ingrese nota 2");
+        nota2 = leer.nextFloat ();
+        System.out.println("Ingrese nota 3");
+        nota3 = leer.nextFloat ();
+        System.out.println("Ingrese nota 4");
+        nota4 = leer.nextFloat ();
+        promedio=(nota1+nota2+nota3+nota4)/4;
+        System.out.println("el promedio de las notas es "+promedio);
+       
+    }
+    
+}
+
+Valores intercambiados
+public class JavaApplication6 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner leer = new Scanner(System.in);
+        int A, B, C;
+         System.out.println("Introduzca valor de A: ");
+        A = leer.nextInt();
+         System.out.println("Introduzca valor de B: ");
+        B = leer.nextInt();
+         System.out.println("Valores iniciales: A = " + A + " B = " + B)
+                C = A;
+                A = B;
+                B = C;
+                System.out.println("valores intercambiados: A = " + A + " B = " + B );
+        }}
+   
+Actividad IF
+    public static void main(String[] args) 
+    {       System.out.println("ingrese un numero");
+        Scanner lector=new Scanner(System.in);
+        int numero=lector.nextInt();
+        if(numero%2==0){
+            System.out.println("el numero ingresado es par ");
+        }else{
+            System.out.println("el numero ingresado es impar ");
+
+        }
+    }
+    
+
+}
+
+
