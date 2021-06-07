@@ -1,0 +1,45 @@
+Utilizando los ciclos iterativos, crear un programa que permita el mayor de N numeros ingresados por el usuario.
+
+    public static void main(String[] args) {double numero;
+		double mayor = 0;
+		int cont = 0;
+		String seguir = "1";
+		Scanner leer = new Scanner(System.in);
+		
+		do
+		{
+			System.out.print("Ingrese un número: ");
+			numero = Double.parseDouble(leer.nextLine());
+			System.out.print("¿Seguir? 1. Sí   2. No: ");
+			seguir = leer.nextLine();
+			++cont;
+			
+			if (cont == 1)
+			{
+				mayor = numero;
+			}
+			else
+			{
+				if (numero > mayor)
+				{
+					mayor = numero;
+				}
+			}
+		} while (seguir.equals("1"));
+		
+		System.out.println();
+		System.out.println("El número mayor ingresado es: " + mayor);
+	}
+        // TODO code application logic here
+    }
+    
+}
+
+
+
+
+
+
+Utilizando los ciclos iterativos, crear un programa que permita ingresar N numeros por teclado y que calcule la suma de los numeros pares ingresados y la multiplicacion de los numeros impares y que ademas le digaal usario si se ingresaron mas numeros pares o impares
+
+

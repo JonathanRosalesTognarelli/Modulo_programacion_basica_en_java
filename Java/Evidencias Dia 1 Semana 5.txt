@@ -1,0 +1,72 @@
+Ejercicio: creación de una clase con atributos y métodos, y creación de instancias de esa clase.
+
+
+public class Atributos {
+    String marca="Ford",modelo="2014",color="Amarillo";
+
+    double precio=1;
+    public static void main (String [] args) {
+        Atributos instancial=new Atributos();
+        
+        System.out.println("Marca: " + instancial.marca);
+        System.out.println("Marca: ") + instancial.modelo) ;
+        System.out.println ("Marca: ") + instancial.color);
+            
+    }
+}       
+
+Ejercicio 2 
+
+package Clases; //Se le declara un paquete
+
+public class Naruto
+{
+    private String aldea;
+    private String nombre;
+    private int edad;
+
+    public Animal(String nuevoNombre)
+    {
+        nombre = nuevoNombre; //Se le da un nombre a Naruto
+    }
+
+    //Método para obtener la edad de Naruto
+    public int getEdad()
+    {
+        return edad;
+    }
+
+    //Método para establecer la Nueva edad d Naruto
+    public void setEdad(int nuevaEdad)
+    {
+        edad = nuevaEdad;
+    }
+
+    //Método para obtener el nombre de Naruto
+    public String getNombre()
+    {
+        return nombre;
+    }
+}
+Clases miObjeto = new Clases(); //Declaramos y creamos el objeto en una línea
+
+import Clases.Naruto; //Importamos la clase Naruto para poder usarla
+
+public class Ejemplo
+{
+    public static void main(String[] args)
+    {
+        //Creamos un shinobi cuyo nombré será Naruto
+        Naruto miNaruto = new Animal("Naruto");
+        //Le establecemos 12 años de edad a Naruto.
+        miNaruto.setEdad(12);
+        //Mostraremos el nombre de Naruto por pantalla
+        System.out.println("El nombre es: " + miNaruto.getNombre());
+        //Mostramos la edad de Naruto por pantalla
+        System.out.println(" y tiene " + miNaruto.getEdad() + " años");
+        //Este código deberia imprimir "El nombre es: Naruto y tiene 12 años"
+    }
+}
+
+Reflexion 
+Con lo visto en clases, es dificil poder crear por si solo los algoritmos, se requiere estudio adicional, visitando paginas webs, libros, videos, etc

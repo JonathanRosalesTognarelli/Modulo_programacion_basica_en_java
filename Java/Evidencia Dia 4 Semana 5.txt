@@ -1,0 +1,210 @@
+Evidencia día 04 semana 05 
+Ejercicio 01: 
+Crear una clase Fecha en java. La clase tendrá tres atributos privados día, mes y año de tipo int. La clase contendrá los siguientes métodos: Constructor por defecto. Constructor con tres parámetros para crear objetos con valores iniciales. Métodos set y get para asignar y obtener los valores de los atributos de la clase. 
+Método fechaCorrecta() 
+que comprueba si la fecha es correcta. Devuelve un valor de tipo boolean indicando si la fecha es correcta o no. 
+Método diaSiguiente() que cambia la fecha actual por la del día siguiente. El objeto de la clase Fecha El objeto de la clase Fecha al que se le aplique este método deberá quedar siempre en un estado consistente, es decir, la nueva fecha deberá ser correcta. Escribe un programa para probar la clase Fecha. 
+El método diaSiguiente() pruébalo dentro de un bucle que imprima la fecha durante cada iteración del bucle. 
+//Clase Fecha Java 
+public class Fecha { 
+private int dia; 
+private int mes; 
+private int año; 
+//Constructor por defecto 
+public Fecha() { 
+} 
+//Constructor con parámetros 
+public Fecha(int dia, int mes, int año) { 
+this.dia = dia; 
+this.mes = mes; 
+this.año = año; 
+} 
+//setters y getters 
+public void setDia(int d) { 
+dia = d; 
+} 
+public void setMes(int m) { 
+mes = m; 
+} 
+public void setAño(int a) { 
+año = a; 
+} 
+public int getDia() { 
+return dia; 
+} 
+public int getMes() { 
+return mes; 
+} 
+public int getAño() { 
+return año; 
+} 
+//Método para comprobar si la fecha es correcta 
+public boolean fechaCorrecta() { 
+boolean diaCorrecto, mesCorrecto, añoCorrecto;
+añoCorrecto = año > 0; 
+mesCorrecto = mes >= 1 && mes <= 12; 
+switch (mes) { 
+case 2: 
+if (esBisiesto()) { 
+diaCorrecto = dia >= 1 && dia <= 29; 
+} else { 
+diaCorrecto = dia >= 1 && dia <= 28; 
+} 
+break; 
+case 4: 
+case 6: 
+case 9: 
+case 11: 
+diaCorrecto = dia >= 1 && dia <= 30; 
+break; 
+default: 
+diaCorrecto = dia >= 1 && dia <= 31; 
+} 
+return diaCorrecto && mesCorrecto && añoCorrecto; 
+} 
+//Método privado para comprobar si el año es bisiesto //Este método lo utiliza el método fechaCorrecta 
+private boolean esBisiesto() { 
+return (año % 4 == 0 && año % 100 != 0 || año % 400 == 0); } 
+//Método que modifica la fecha cambiándola por la del día siguiente public void diaSiguiente() { 
+dia++; 
+if (!fechaCorrecta()) { 
+dia = 1; 
+mes++; 
+if (!fechaCorrecta()) { 
+mes = 1; 
+año++; 
+} 
+} 
+} 
+//Método toString para mostrar la fecha 
+@Override 
+public String toString() { 
+StringBuilder sb = new StringBuilder(); 
+if (dia < 10) { 
+sb.append("0"); 
+} 
+sb.append(dia); 
+sb.append("-"); 
+if (mes < 10) { 
+sb.append("0"); 
+} 
+sb.append(mes); 
+sb.append("-"); 
+sb.append(año); 
+return sb.toString(); 
+} 
+} 
+package poodia04semana05; 
+import java.util.Scanner;
+public class POOdia04semana05 { 
+public static void main(String[] args) { Scanner leer = new Scanner(System.in); Fecha fecha1 = new Fecha(); 
+fecha1.ingreseDatos(); 
+fecha1.fechaCorrecta(); 
+fecha1.diaSiguiente(); 
+fecha1.añoBisiesto(); 
+} 
+} 
+package poodia04semana05; 
+import java.util.Scanner; 
+public class Fecha { 
+//ATRIBUTOS 
+private int dia; 
+private int mes; 
+private int año; 
+boolean comprobacion = false; 
+//CONSTRUCTOR 
+public Fecha(){ 
+} 
+public Fecha (int _dia, int _mes, int _año){ dia=_dia; 
+mes=_mes; 
+año=_año; 
+} 
+//MÉTODOS SET Y GET 
+public void setDia(){ 
+} 
+public int getDia(){ 
+return dia; 
+} 
+public void setMes(){ 
+} 
+public int getMes(){ 
+return mes; 
+} 
+public void setAño(){ 
+} 
+public int getAño(){ 
+return año; 
+} 
+//MÉTODO para ingresar datos por el usuario 
+public void ingreseDatos(){ 
+Scanner leer = new Scanner(System.in); System.out.println("Ingrese un dia");
+dia = leer.nextInt(); 
+System.out.println("Ingrese un mes"); 
+mes = leer.nextInt(); 
+System.out.println("Ingrese un año"); 
+año = leer.nextInt(); 
+} 
+//MÉTODO fechaCorrecta (comprueba si la fecha es correcta) 
+public void fechaCorrecta(){ 
+boolean comprobacion = false; 
+if (año>0){ 
+if (mes>=1 && mes<=12){ 
+if (mes==2) { 
+if(dia>=1 && dia<=28){ 
+comprobacion = true; 
+System.out.println("Su fecha ingresada: "+dia+"/"+mes+"/"+año+" Es "+comprobacion); }else{ 
+System.out.println("La fecha ingresada no es correcta (día incorrecto)"); 
+} 
+}else{ 
+if (mes==1 || mes==3 || mes==5 || mes==7 || mes==8 || mes ==10 || mes==12){ if (dia>=1 && dia<=31){ 
+comprobacion = true; 
+System.out.println("Su fecha ingresada: "+dia+"/"+mes+"/"+año+" Es "+comprobacion); }else{ 
+System.out.println("La fecha ingresada no es correcta (día incorrecto)"); 
+} 
+}else{ 
+if (dia>=1 && dia<=30){ 
+comprobacion = true; 
+System.out.println("Su fecha ingresada: "+dia+"/"+mes+"/"+año+" Es "+comprobacion); }else{ 
+System.out.println("La fecha ingresada no es correcta (día incorrecto)"); 
+} 
+} 
+} 
+}else{ 
+System.out.println("La fecha ingresada no es correcta (mes incorrecto)"); 
+} 
+}else{ 
+System.out.println("La fecha ingresada no es correcta (año incorrecto)"); 
+} 
+} 
+//MÉTODO díaSiguiente (cambia la fecha al dia siguiete), hay que colocarle un bucle qie imprima la fecha de cada iteracion del bucle 
+public void diaSiguiente(){ 
+if (mes==2){ 
+for (int i = 1; i < (28-dia)+1; i++) { //FEBRERO 
+System.out.println((dia+i)+"/"+mes+"/"+año); 
+} 
+}else{ 
+if (mes==1 || mes==3 || mes==5 || mes==7 || mes==8 || mes ==10 || mes==12){ for (int i = 1; i < (31-dia)+1; i++) { //MES CON 31 DIAS 
+System.out.println((dia+i)+"/"+mes+"/"+año); 
+} 
+}else{ 
+for (int i = 1; i < (30-dia)+1; i++) { //MES CON 30 DIAS 
+System.out.println((dia+i)+"/"+mes+"/"+año); 
+} 
+}
+} 
+} 
+//METODO AÑO BISIESTO 
+public void añoBisiesto(){ 
+if(comprobacion = true){ 
+if ((año%4==0) && (año%100!=0) || año%400==0) { 
+System.out.println("Su año ingresado es bisiesto"); 
+}else{ 
+if (año%100==0){ 
+System.out.println("Su año ingresado NO es bisiesto"); 
+} 
+} 
+} 
+} 
+} 
+Reflexión: 
+Esta actividad nos dio las herramientas para declarar los metodos set y get para cada atributo. Gracias a eso podemos modificar el valor de los tributos.

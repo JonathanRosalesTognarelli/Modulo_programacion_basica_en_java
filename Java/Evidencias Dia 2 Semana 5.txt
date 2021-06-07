@@ -1,0 +1,92 @@
+Ejercicios 
+Crear un proyecto, agregarle una clase y métodos constructores y métodos de clase. 
+Crear tres clases con sus respectivos atributos, métodos, métodos constructores por defecto y con todos los atributos, métodos accesores y crear distintas instancias en el main para probar las clases. 
+public class Animal 
+{ 
+private String raza; 
+private String nombre; 
+private int edad; 
+public Animal(String bigo) 
+{ 
+nombre = “Bigo”; 
+} 
+//Método para obtener la edad del animal 
+public int getEdad() 
+{ 
+return edad; 
+} 
+//Método para establecer la edad del animal 
+public void setEdad(int nuevaEdad) 
+{ 
+edad = nuevaEdad; 
+} 
+//Método para obtener el nombre del animal
+public String getNombre() 
+{ 
+return nombre; 
+} 
+public class MetodosObjetos { 
+private static Class1 Class1; 
+public static void main(String[] args) { 
+Class1 = new Class1(); 
+System.out.println("Su nombre es: " + Class1.getNombre()); 
+Class1 = new Class1(); 
+System.out.println("Su edad es: " + Class1.getEdad()); 
+Class1 = new Class1(); 
+System.out.println("Su estatura es: " + Class1.getEstatura()); 
+Class1 = new Class1(); 
+System.out.println("Usted camina: " + Class1.getCamina()); } 
+} 
+//Atributos 
+public class Class1 { 
+private String nombre; 
+private int edad; 
+private double estatura; 
+private char sexo; 
+private String camina; 
+private String come; 
+private double kilometros; 
+private String vive; 
+private String apellido;
+//Constructores 
+public Class1() 
+{ 
+this.camina = "Mucho"; 
+this.nombre = "pedro"; 
+this.edad = 25; 
+this.estatura = 1.7; 
+this.sexo ='m'; 
+this.apellido = "Maldonado "; 
+} 
+public Class1(String nombre, int edad, double estatura, char sexo) { 
+this.nombre =nombre; 
+this.edad = edad; 
+this.estatura = estatura; 
+this.sexo = sexo; 
+this.estatura = 1.7; 
+} 
+public String getNombre() 
+{ 
+return nombre; 
+} 
+// metodos Get y Set 
+public void setNonmbre(String nombre){ 
+this.nombre=nombre; 
+} 
+public String getApellido(){
+return apellido; 
+} 
+public int getEdad(){ 
+return edad; 
+} 
+public double getEstatura(){ 
+return estatura; 
+} 
+public String getCamina(){ 
+return camina; 
+} 
+} 
+
+Reflexion:
+Fue muy difil hacer esta tarea, debido a que no lograba hacer que java vinculara la clase que habia usado. Luego de pedir ayuda a un especialista en Java
+Logre solucionarlo y hacer correr el programa correctamente. 
